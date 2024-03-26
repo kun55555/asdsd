@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录界面</title>
+</head>
+<body>
+    <h1>登录</h1>
+    <form id="loginForm" action="/login" method="POST">
+        <!-- Login form fields here -->
+        <input type="text" name="username" placeholder="Username" required><br>
+        <input type="password" name="password" placeholder="Password" required><br>
+        <button type="submit">登录</button>
+    </form>
+    <p>还没用用户吗？ <a href="/register">注册</a></p>
+    
+    <script>
+        // JavaScript code to handle redirection to registration page
+        document.querySelector('a[href="/register"]').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default link behavior
+            window.location.href = "/register"; // Redirect to registration page
+        });
+    </script>
+</body>
+</html>
+
+
